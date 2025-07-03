@@ -10,13 +10,15 @@ public WebDriver driver;
 		//Create instance of driver as ChromeDriver
 		driver = new ChromeDriver();
 		//Access the URL to be tested using get()
-		driver.get("https://selenium.gabible.in/");
+		driver.get("https://selenium.qabible.in/");
 		//Automate the maximizing of window
 		driver.manage().window().maximize();
+	
 	}
 	
 	//Automate to close the screen
 	public void browserClose() {
+		//close() closes only one window in the session and quit() closes multiple windows in the session.
 		driver.quit(); 
 	}
 	public static void main(String[] args) {
