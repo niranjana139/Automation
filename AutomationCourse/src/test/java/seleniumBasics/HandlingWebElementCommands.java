@@ -10,8 +10,10 @@ public class HandlingWebElementCommands extends Base{
 		WebElement msgBox = driver.findElement(By.xpath("//input[@id='single-input-field']"));
 		//SendKeys used to give a text to the text boxes via code
 		msgBox.sendKeys("Niranjana");
-		//Click
+		//Simulates click action
 		WebElement btn = driver.findElement(By.xpath("//button[@id='button-one']"));
+		System.out.println(btn.isDisplayed());
+		System.out.println(btn.isEnabled());
 		btn.click();
 		
 		WebElement msgText = driver.findElement(By.xpath("//div[@id=\'message-one\']"));

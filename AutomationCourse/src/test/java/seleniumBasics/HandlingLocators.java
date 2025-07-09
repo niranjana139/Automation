@@ -40,6 +40,8 @@ public class HandlingLocators extends Base {
 		driver.findElement(By.xpath("//button[@id='button-one']//following::div[@class='card']"));
 		//xPath access using Preceeding
 		driver.findElement(By.xpath("//button[@id='button-one']//preceding:: div[@class='card']"));
+		//xPath access using ancestor
+		driver.findElement(By.xpath("//div/ancestor::div[@class='card']"));
 		//xPath access using Descendant
 		driver.findElement(By.xpath("//div[@class='card']//descendant::div"));
 		
