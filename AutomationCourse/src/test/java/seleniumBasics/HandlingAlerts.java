@@ -11,6 +11,7 @@ public class HandlingAlerts extends Base {
 		WebElement alertBtn = driver.findElement(By.xpath("//button[@id='alertButton']"));
 		alertBtn.click();
 		Alert alert=driver.switchTo().alert();
+		System.out.println(alert.getText());
 		alert.accept();
 	}
 	
@@ -19,8 +20,9 @@ public class HandlingAlerts extends Base {
 		WebElement confirmAlertBtn = driver.findElement(By.xpath("//button[@id='confirmButton']"));
 		confirmAlertBtn.click();
 		Alert alert=driver.switchTo().alert();
-		alert.accept();
-		
+		System.out.println(alert.getText());
+		//alert.accept();
+		alert.dismiss();
 	}
 
 	public void promptAlert() {
@@ -28,10 +30,11 @@ public class HandlingAlerts extends Base {
 		WebElement promptAlert = driver.findElement(By.id("promtButton"));
 		promptAlert.click();
 		Alert alert=driver.switchTo().alert();
-		alert.sendKeys("Niranjana");
+		alert.sendKeys("Hello");
+		System.out.println(alert.getText());
 		alert.accept();
-		
-	}
+		//alert.dismiss();
+	} 
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

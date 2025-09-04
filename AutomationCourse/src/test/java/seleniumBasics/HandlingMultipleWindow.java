@@ -12,6 +12,7 @@ public class HandlingMultipleWindow extends Base{
 		driver.navigate().to("https://demo.guru99.com/popup.php");
 		//For getting handle ID
 		String firstWindowHandleId = driver.getWindowHandle();
+	
 		WebElement clickMe = driver.findElement(By.xpath("//a[text()='Click Here']"));
 		clickMe.click();
 		Set<String>handleIDs = driver.getWindowHandles();
@@ -37,6 +38,7 @@ public class HandlingMultipleWindow extends Base{
 		HandlingMultipleWindow multiple = new HandlingMultipleWindow();
 		multiple.initializeBrowser();
 		multiple.verifyMultipleWindow();
+		//multiple.browserClose();
 	}
 
 }

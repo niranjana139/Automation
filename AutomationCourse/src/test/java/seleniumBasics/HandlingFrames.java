@@ -13,9 +13,14 @@ public class HandlingFrames extends Base{
 		List<WebElement>totalFrames= driver.findElements(By.tagName("iframe"));
 		//Returns total number of frames
 		System.out.println(totalFrames.size());
+		//driver.switchTo().frame(1);
+		//driver.switchTo().frame("frame1");
+		//driver.switchTo().parentFrame();
+		
 		WebElement frameElement=driver.findElement(By.xpath("//iframe[@id='frame1']"));
 		//Takes the control to frameElement
 		driver.switchTo().frame(frameElement);
+	
 		WebElement heading=driver.findElement(By.id("sampleHeading"));
 		System.out.println(heading.getText());
 		//takes the control back to the initial point

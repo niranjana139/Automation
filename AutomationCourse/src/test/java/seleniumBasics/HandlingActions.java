@@ -17,7 +17,7 @@ public class HandlingActions extends Base{
 		act.contextClick(right).build().perform();
 	}
 	
-	public void verifyMouseHover() {
+	public void verifyMouseHover() { 
 		WebElement right= driver.findElement(By.xpath("//a[text()='Home']"));
 		Actions act =  new Actions(driver);
 		act.moveToElement(right).build().perform();
@@ -47,13 +47,13 @@ public class HandlingActions extends Base{
 		actions.initializeBrowser();
 		//actions.verifyRightClick();
 		//actions.verifyMouseHover();
-		//actions.verifyDragAndDrop();
-		try {
+		actions.verifyDragAndDrop();
+		/*try {
 		actions.verifyKeyboardAction();
 		}
 		catch(AWTException e) {
 			e.printStackTrace();
-		}
+		}*/
 	}
 
 }

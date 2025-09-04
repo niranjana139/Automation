@@ -10,9 +10,9 @@ public class HandlingBrowserCommands extends Base{
 		//Gets the URL of page in console
 		String url = driver.getCurrentUrl();
 		System.out.println(url);
-		//Gets the Id of window in the session. getWindowHandles() return a list/set of ID for each windows in the session
+		//Gets the Id of window in the session. getWindowHandles() return a set of ID for each windows in the session
 		String handleId = driver.getWindowHandle();
-		System.out.println(handleId);
+		System.out.println(handleId); 
 		//Gets the sourcecode of webpage
 		String pageSource = driver.getPageSource();
 		System.out.println(pageSource);

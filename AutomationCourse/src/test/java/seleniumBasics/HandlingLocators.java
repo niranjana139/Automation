@@ -12,7 +12,7 @@ public class HandlingLocators extends Base {
 		
 		//driver.findElement(By.className("btn btn-primary"));
 		
-		driver.findElement(By.tagName("button"));
+		driver.findElement(By.tagName("button")); 
 		
 		driver.findElement(By.name("viewport"));
 		
@@ -26,29 +26,28 @@ public class HandlingLocators extends Base {
 		driver.findElement(By.xpath("//button[text()='Get Total']"));
 
 		driver.findElement(By.xpath("//button[starts-with(text(),'Show ')]"));
-		
+		 
 		
 		//Combine more than 1 attribute to get 1 of 1 for xpath written
 		driver.findElement(By.xpath("//button[@id='button-one' and @type='button']"));
 		driver.findElement(By.xpath("//button[@id='button-one' or @id='button-one-electronics']"));
 		
-		//xPath access using parent
+		//xPath access using parent. Selects the Parent of node specified.
 		driver.findElement(By.xpath("//div[contains (text(), 'Single Input Field')]//parent::div[@class='card']"));
-		//xPath access using child
+		//xPath access using child. Selects the Child of node specified
 		driver.findElement(By.xpath("//div[@class='card']//child::button[@id='button-one']"));
-		//xPath access using following
+		//xPath access using following. Selects div that is given in following
 		driver.findElement(By.xpath("//button[@id='button-one']//following::div[@class='card']"));
-		//xPath access using Preceeding
+		//xPath access using Preceeding. Selects the div that preceeds button
 		driver.findElement(By.xpath("//button[@id='button-one']//preceding:: div[@class='card']"));
-		//xPath access using ancestor
+		//xPath access using ancestor. Selects the parent/grand parent that has div with class card
 		driver.findElement(By.xpath("//div/ancestor::div[@class='card']"));
-		//xPath access using Descendant
+		//xPath access using Descendant. Selects the child/grandchild node where div comes after the div with class 'card'
 		driver.findElement(By.xpath("//div[@class='card']//descendant::div"));
-		
-		
+			
 	}
 	
-		public static void main(String[] args) {
+	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		HandlingLocators locators = new HandlingLocators();
 		locators.initializeBrowser();
